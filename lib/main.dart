@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/carrinho.dart';
-import 'package:my_project/detalhes.dart';
-import 'package:my_project/endereco.dart';
-import 'package:my_project/finalizacao.dart';
-import 'package:my_project/home_page.dart';
-import 'package:my_project/cartao.dart';
+import 'package:my_project/login/user_provider.dart';
+import 'package:my_project/screens/detalhes.dart';
+import 'package:my_project/screens/endereco.dart';
+import 'package:my_project/screens/home_page.dart';
+import 'package:my_project/screens/telaInical.dart';
+import 'package:my_project/screens/user_form.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +15,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return UserProvider(
+      child: MaterialApp(
       debugShowCheckedModeBanner: false, //tira a listra
-      home: HomePage(),
+      home: MyHomePage(),
+      routes: {
+          "/create": (_) => UserForm(),
+        },
+    ),
     );
   }
 }

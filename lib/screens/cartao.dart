@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_project/finalizacao.dart';
-import 'package:my_project/styles.dart';
+import 'package:my_project/screens/finalizacao.dart';
+import 'package:my_project/componentes/styles.dart';
 
 class PagamentoCartao extends StatelessWidget {
   const PagamentoCartao({super.key});
@@ -37,11 +37,11 @@ class PagamentoCartao extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Icon(Icons.shopify, size: 50),
+                const Icon(Icons.shopify, size: 50),
                 divider(200, 1),
-                Icon(Icons.credit_card_outlined, size: 50),
+                const Icon(Icons.credit_card_outlined, size: 50),
                 divider(200, 1),
-                Icon(Icons.check_box, size: 50),
+                const Icon(Icons.check_box, size: 50),
               ],
             ),
           ),
@@ -57,7 +57,7 @@ class PagamentoCartao extends StatelessWidget {
               Container(
                 width: 360,
                 height: 160,
-                color:  Color.fromARGB(255, 213, 207, 207),
+                color:  const Color.fromARGB(255, 213, 207, 207),
                 
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +72,7 @@ class PagamentoCartao extends StatelessWidget {
               Container(
                 width: 360,
                 height: 160,
-                color:  Color.fromARGB(255, 240, 232, 232),
+                color:  const Color.fromARGB(255, 240, 232, 232),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -85,31 +85,36 @@ class PagamentoCartao extends StatelessWidget {
               ),
             ],
           ),
-         SizedBox(
+         const SizedBox(
           height: 32,
          ),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
             child: Text('Número do cartão:',
                 style: GoogleFonts.poppins(
                 fontSize: 24, fontWeight: FontWeight.bold),),
           ),
-          const Padding(padding: EdgeInsets.all(8),
-          child: SizedBox(
-            width: 800,
-            height: 90,
-             child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                    ),
-                    label: Text('XXX XXX XXX'),
+          const Padding(
+            padding: EdgeInsets.all(8),
+            child: SizedBox(
+              width: 800,
+              height: 60,
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'XXXXXXXXXXX',
                     filled: true,
                     fillColor:  Color.fromARGB(255, 240, 232, 232),
-                    contentPadding: EdgeInsets.all(8)),
-              ),), ),),
+                    contentPadding: EdgeInsets.all(8),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(15.0)), // Define o borderRadius
+                      borderSide: BorderSide.none, // Remove a borda
+                    ),
+                  ),
+                ),
+              ), ),),
               ///////////////////////////////////////////////
               Row(
                  mainAxisAlignment: MainAxisAlignment.center,
@@ -117,54 +122,64 @@ class PagamentoCartao extends StatelessWidget {
                   Column(
                     children: [
                       Padding(
-            padding: EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
             child: Text('Data de expiração:',
                 style: GoogleFonts.poppins(
                 fontSize: 24, fontWeight: FontWeight.bold),),
           ),
-          const Padding(padding: EdgeInsets.all(8),
-          child: SizedBox(
-            width: 390,
-            height: 90,
-             child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                    ),
-                    label: Text('mm/yy'),
+          const Padding(
+            padding: EdgeInsets.all(8),
+            child: SizedBox(
+              width: 390,
+              height: 90,
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'XX/XX/XXXX',
                     filled: true,
                     fillColor:  Color.fromARGB(255, 240, 232, 232),
-                    contentPadding: EdgeInsets.all(8)),
-              ),), ),),
+                    contentPadding: EdgeInsets.all(8),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(15.0)), // Define o borderRadius
+                      borderSide: BorderSide.none, // Remove a borda
+                    ),
+                  ),
+                ),
+              ), ),),
                     ],
                   ),
                   ///////////////////////////////////////
                   Column(
                     children: [
                       Padding(
-            padding: EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
             child: Text('CVV:',
                 style: GoogleFonts.poppins(
                 fontSize: 24, fontWeight: FontWeight.bold),),
           ),
-          const Padding(padding: EdgeInsets.all(8),
-          child: SizedBox(
-            width: 390,
-            height: 90,
-             child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                    ),
-                    label: Text('XXX'),
+          const Padding(
+            padding: EdgeInsets.all(8),
+            child: SizedBox(
+              width: 390,
+              height: 90,
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    labelText: 'XXX',
                     filled: true,
                     fillColor:  Color.fromARGB(255, 240, 232, 232),
-                    contentPadding: EdgeInsets.all(8)),
-              ),), ),),
+                    contentPadding: EdgeInsets.all(8),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(15.0)), // Define o borderRadius
+                      borderSide: BorderSide.none, // Remove a borda
+                    ),
+                  ),
+                ),
+              ), ),),
                     ],
                   ),
                 ],
@@ -183,14 +198,14 @@ class PagamentoCartao extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 250,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GestureDetector(
                 onTap: () => Navigator.of(context)
-                .push(MaterialPageRoute(builder: (_) => Finalizacao())),
+                .push(MaterialPageRoute(builder: (_) => const Finalizacao())),
                 child: Container(
                         height: 50,
                         width: 800,

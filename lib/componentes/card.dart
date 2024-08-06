@@ -5,11 +5,11 @@ Container cardProdutos(String img, String txt, String txt2){
   return Container(
             height: 450,
             width: 390,
-            padding: EdgeInsets.all(8.0),
-            margin: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(8.0),
+            margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color:Color.fromARGB(255, 250, 239, 239),
+                color:const Color.fromARGB(255, 250, 239, 239),
               ),
             child: Column(
               children: [
@@ -45,24 +45,24 @@ Container cardDetalhe (String img){
       return Container(
         width: 95,
         height:95,
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color:Color.fromARGB(255, 250, 239, 239),),
+        color:const Color.fromARGB(255, 250, 239, 239),),
         child: Image.asset(img),
       );
 }
 
 Container cardTamanho (String txt){
       return Container(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         alignment: Alignment.center,
         width: 60,
         height:60,
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color:Color.fromARGB(255, 250, 239, 239),),
+        color:const Color.fromARGB(255, 250, 239, 239),),
         child: Text(txt, style: GoogleFonts.poppins(color: const Color.fromARGB(255, 98, 8, 1), fontSize:24, fontWeight: FontWeight.w700),)
       );
 }

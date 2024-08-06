@@ -72,7 +72,7 @@ class _SlideState extends State<Slide> {
           value: progresso[i],
           backgroundColor: Colors.grey[200],
           valueColor: AlwaysStoppedAnimation<Color>(
-            paginaAtual == i? Color.fromARGB(255, 146, 38, 38) : Colors.grey,
+            paginaAtual == i? const Color.fromARGB(255, 146, 38, 38) : Colors.grey,
           ),
         ),
       ));

@@ -55,13 +55,13 @@ Container divider( double largura, double altura) {
 InputDecoration caixaTxt (String label){
   return InputDecoration(
     label: Text(label),
-    fillColor:   Color.fromARGB(255, 240, 232, 232),
+    fillColor:   const Color.fromARGB(255, 240, 232, 232),
     filled: true,
-    contentPadding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+    contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
-      borderSide: BorderSide(color:  Color.fromARGB(255, 240, 232, 232),),
+      borderSide: const BorderSide(color:  Color.fromARGB(255, 240, 232, 232),),
     )
   );
 }

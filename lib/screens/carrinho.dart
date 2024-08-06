@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_project/endereco.dart';
+import 'package:my_project/screens/endereco.dart';
 
 class Carrinho extends StatelessWidget {
   const Carrinho({super.key});
@@ -11,7 +11,7 @@ class Carrinho extends StatelessWidget {
       appBar: AppBar(
          title: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 8,
             ),
             Image.asset(
